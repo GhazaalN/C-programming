@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, temp , i;
+    double sum = 0 , sum_2 = 0 , variance = 0 , avg=0;
+    scanf("%d", &n);
+    for (i = 1; i <= n; i++)
+    {
+        scanf("%d", &temp);
+        sum = sum + (double)temp;
+        sum_2 += (double) temp * (double) temp ;
+    }
+    avg = sum / (double)n ;
+    variance = sum_2/(double) n - avg*avg ;
+    printf("Variance: %.2f | AVG: %.2f ",variance,avg);
+    return 0;
+}
